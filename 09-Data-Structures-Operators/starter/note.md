@@ -31,6 +31,7 @@
 
 # RECAP: -
 ## The SPREAD and the REST syntax both look exactly the same, but the work in opsite ways depending on where they are used. The SPREAD operator is used where we would write values separated by a comma. On the other hand, the REST pattern is basically used where we would otherwise write variable names separated by commas. (The Rest pattern can be used where we would write variable names separated by commas).
+
 # ///////////////////////////////////////
 
 
@@ -70,11 +71,6 @@
 
 
 
-
-
-
-
-
 ## THE NULLISH COALESCING OPERATOR
 
 # Note: The Nullish Coalescing operator works with the idea or with the concept of knowledge values instead of falsey.
@@ -83,6 +79,26 @@
 
 # Note: Only Nullish values willshort-circuit the evaluation. So only if the first operant is null or undefined will the second operant be executed and returned
 
-
 # ///////////////////////////////////////
 
+
+
+## LOGICAL ASSIGNMENT OPERATORS NOTES
+
+1. OR assignment operator (||=): This operator assign a value to a variable if that variable is currently falsey. 
+    However, it doesn't work if the variable default is 0 because zero is a falsey value. This can be resolved by using the logical nullish assignment operator
+
+1. The logical nullish assignment operator (??=): Will assign value to a variable if that exact variable is currently nullish (null or undefined)
+
+1. The logical AND assignment operator (&&=): 
+
+    - This short-circuit when the first value is falsey, then immediately return that falsey value.
+
+    - It assign a value to a variable if it is currently truety
+
+    - If the variable is falsey, then nothing happen
+    
+    # RECAP: If you ever need to assign value to a variable that is already defined (Tha has a value that is currently truety), then you can you this AND Assignment operator.
+
+
+# ///////////////////////////////////////
