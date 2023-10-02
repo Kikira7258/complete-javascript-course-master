@@ -99,6 +99,37 @@
     - If the variable is falsey, then nothing happen
     
     # RECAP: If you ever need to assign value to a variable that is already defined (Tha has a value that is currently truety), then you can you this AND Assignment operator.
-
-
 # ///////////////////////////////////////
+
+
+## FOR OF LOOP NOTES
+1. The FOR OF LOOP make it a lot easier to loop over arrays
+1. With a FOR OF LOOP, you don't need to a 'counter' or 'condition', or to updating the counter, like you would with a regular FOR LOOP.
+1. The For Of Loop is really just meant to give you the current element. So aquiring the current index is more difficult. However you can get both ( using entries()).
+    - The entries() method returns an iterator object that contains the index-value pairs of each item.
+    - It is basically an array which in each position contains a new array which contains the element, and the index number of the element in the original array.
+1. We can use the 'continue' and 'break' keywords in the For of loop.
+# ///////////////////////////////////////
+
+
+
+## ENCHANCED OBJECT LITERALS NOTE
+1. Object literal (Internet note): an object literal is a comma-separated list of name-value pairs inside of curly braces
+
+1. ES6 introduce 3 ways to make it easier to write object literal.
+
+    ## Object literal first enhancement
+    - if 'OBJECT-A' is outside of 'OBJECT-B', but you would like to be able to access object A inside of 'OBJECT-B', with enchanced object literal this is possible by simple referrening 'OBJECT-A' variable name inside 'OBJECT-B' as a property (OBJECT-A,). 
+        - What this does is take 'OBJECT-A' and put it into 'OBJECT-B' and create a property name with exactly that variable name (in 'OBJECT-B'). Also if you change the variable name of 'OBJECT-A', then it should also be changed in 'OBJECT-B'
+
+    ## Object literal second enhancement
+    - This is about writing methods. In ES6, we no longer have to a property and then set it to a function expression. Before we would have create a property and then set it to a function expression. However, with ES6 we no longer have to do that, has if can be written in an easier way, which is to get rid of the 'function' and 'semicolon'. From 'example: function(argument/s){}' to 'example(argument/s){}'.
+
+    ## Object literal third enhancement
+    - We can now compute(calculate) property names instead of having to write them out manually and literally.
+    - You can square bracket syntax to take property names out of an array instead of writing them manually.
+        - you can put any expression in the square bracket syntax
+    - Before we could only compute the values but we could not compute property names, but now we can do that as well.
+
+
+
