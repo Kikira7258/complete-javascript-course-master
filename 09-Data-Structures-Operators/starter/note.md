@@ -122,8 +122,11 @@
     - if 'OBJECT-A' is outside of 'OBJECT-B', but you would like to be able to access object A inside of 'OBJECT-B', with enchanced object literal this is possible by simple referrening 'OBJECT-A' variable name inside 'OBJECT-B' as a property (OBJECT-A,). 
         - What this does is take 'OBJECT-A' and put it into 'OBJECT-B' and create a property name with exactly that variable name (in 'OBJECT-B'). Also if you change the variable name of 'OBJECT-A', then it should also be changed in 'OBJECT-B'
 
+    ```javascript
+    { name: "example" }
+    ```
     ## Object literal second enhancement
-    - This is about writing methods. In ES6, we no longer have to a property and then set it to a function expression. Before we would have create a property and then set it to a function expression. However, with ES6 we no longer have to do that, has if can be written in an easier way, which is to get rid of the 'function' and 'semicolon'. From 'example: function(argument/s){}' to 'example(argument/s){}'.
+    - This is about writing methods. In ES6, we no longer have to create a property and then set it to a function expression. Before we would have to create a property and then set it to a function expression. However, with ES6 we no longer have to do that, has if can be written in an easier way, which is to get rid of the 'function' and 'semicolon'. From 'example: function(argument/s){}' to 'example(argument/s){}'.
 
     ## Object literal third enhancement
     - We can now compute(calculate) property names instead of having to write them out manually and literally.
