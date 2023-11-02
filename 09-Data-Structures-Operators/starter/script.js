@@ -94,40 +94,81 @@ const restaurant = {
 
 };
 
-if (restaurant.openingHours && restaurant.openingHours.mon)
-console.log(restaurant.openingHours.mon.open);
 
-// console.log(restaurant.openingHours.mon.open);
+// Property NAMES
+const properties = Object.keys(openingHours);
+console.log(properties);
 
-// With optional chaining
-console.log(restaurant.openingHours.mon?.open);
-console.log(restaurant.openingHours?.mon?.open);
+let openStr = `We are open on ${properties.length} days`;
 
-// Example of optional chaining
-const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+// for (const day of Object.keys(openingHours)) {
+//   console.log(day);
+// }
 
-for (const day of days) {
-  // console.log(day);
-  const open = restaurant.openingHours[day]?.open ?? 'closed';
-  console.log(`On ${day}, we open at ${open}`);
+for (const day of properties) {
+  openStr += ` ${day},`;
+}
+
+console.log(openStr);
+
+
+// Property VALUES
+const values = Object.values(openingHours);
+console.log(values);
+
+
+// Entire object || Transform object into an array
+const entries = Object.entries(openingHours);
+// console.log(entries);
+
+
+// for (const [key, {open, close}] of entries) {
+//   // console.log(entries);
+//   console.log(`On ${key} we open at ${open} and close at ${close}`);
+// }
+
+// [key, value]
+for (const [day, {open, close}] of entries) {
+  // console.log(entries);
+  console.log(`On ${day} we open at ${open} and close at ${close}`);
 }
 
 
-// Methods
-console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
-console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
-
-//Arrays
-const users = [{ name: 'Jonas', email: 'hello@jonas.io' }];
-// const users = []
-
-console.log(users[0]?.name ?? 'User array empty');
-
-// Without Optional chaining we would have to do something like this:
-if (users.length > 0) console.log(users[0].name);
-else console.log('User array empty');
 
 
+
+// if (restaurant.openingHours && restaurant.openingHours.mon)
+// console.log(restaurant.openingHours.mon.open);
+
+// // console.log(restaurant.openingHours.mon.open);
+
+// // With optional chaining
+// console.log(restaurant.openingHours.mon?.open);
+// console.log(restaurant.openingHours?.mon?.open);
+
+// // Example of optional chaining
+// const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+// for (const day of days) {
+//   // console.log(day);
+//   const open = restaurant.openingHours[day]?.open ?? 'closed';
+//   console.log(`On ${day}, we open at ${open}`);
+// }
+
+
+// // Methods
+// console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
+// console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
+
+// //Arrays
+// const users = [{ name: 'Jonas', email: 'hello@jonas.io' }];
+// // const users = []
+
+// console.log(users[0]?.name ?? 'User array empty');
+
+// // Without Optional chaining we would have to do something like this:
+// if (users.length > 0) console.log(users[0].name);
+// else console.log('User array empty');
 
 
 

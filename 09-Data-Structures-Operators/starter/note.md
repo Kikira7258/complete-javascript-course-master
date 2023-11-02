@@ -1,3 +1,14 @@
+# ///////////////////////////////////////
+## LOOPING OBJECTS: OBJECT KEYS. VALUES. AND ENTRIES
+1. You can indirectly loop over objects that are not iterable
+    - Note: The 'FOR OF' loop loops over iterables.
+
+# ///////////////////////////////////////
+
+
+
+
+
 
 # ///////////////////////////////////////
 ## OPTIONAL CHAINING NOTES
@@ -29,14 +40,7 @@
 
 
 Reminder Note: If you want to use a variable name as a property name, you have to to use the brackets notation eg: [day]   (see fundametal section)
-
-
-
-
 # ///////////////////////////////////////
-
-
-
 
 
 
